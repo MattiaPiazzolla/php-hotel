@@ -53,9 +53,9 @@ $hotels = [
  </head>
  <body>
  <div class="container">
-     <h1 class="text-center mt-5">Hotels</h1>
      <div class="row">
-        <div class="col-12">
+         <h2 class="text-center mt-5">Dati grezzi di Hotels</h2>
+         <div class="col-12">
             <ul>
                 <?php foreach ($hotels as $hotel) { ?>
                     <li>
@@ -63,9 +63,22 @@ $hotels = [
                     </li>
                  <?php } ?>
             </ul>
-
         </div>
      </div>
+     <div class="container">
+        <h2 class="my-4 text-center">Lista degli Hotel</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <?php
+                        foreach ($hotels[0] as $key => $value) {
+                            echo "<th>" .$key. "</th>";
+                        }
+                    ?>
+                </tr>
+            </thead>
+        </table>
+    </div>
  </div>   
  </body>
  </html>
