@@ -15,3 +15,7 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
 **SCOMPOSIZIONE PROBLEMA**
 1-Inserisco l'arrai di hotel nella sezione php
 2-Stampo a video le informazioni di un'array utilizzando l'iterazione foreach
+3-Definisco la struttura della mia tabella
+4-Importo le key della della tabella per definire i suoi campi
+5-Importo tutti i dati nella tabella
+6-Bonus
