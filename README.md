@@ -14,3 +14,4 @@ Se non viene specificato nessun filtro, visualizzare come in precedenza tutti gl
 
 **SCOMPOSIZIONE PROBLEMA**
 1-Inserisco l'arrai di hotel nella sezione php
+2-Stampo a video le informazioni di un'array utilizzando l'iterazione foreach
