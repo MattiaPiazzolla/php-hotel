@@ -54,29 +54,32 @@ $hotels = [
  <body>
  <div class="container">
      <div class="row">
-         <h2 class="text-center mt-5">Dati grezzi di Hotels</h2>
-         <div class="col-12">
-            <ul>
-                <?php foreach ($hotels as $hotel) { ?>
-                    <li>
-                        <?php var_dump($hotel); ?>
-                    </li>
-                 <?php } ?>
-            </ul>
-        </div>
+         <h2 class="text-center mt-5">Dati</h2>
+         <?php foreach ($hotels as $hotel) { ?>
+                 <?php var_dump($hotel); ?>
+          <?php } ?>
      </div>
      <div class="container">
         <h2 class="my-4 text-center">Lista degli Hotel</h2>
-        <table class="table">
+        <table class="table table-striped table-dark">
             <thead>
-                <tr>
-                    <?php
-                        foreach ($hotels[0] as $key => $value) {
-                            echo "<th>" .$key. "</th>";
-                        }
-                    ?>
-                </tr>
+                <?php foreach ($hotels[0] as $key => $value) { ?>
+                    <th class="text-center">        
+                        <?php echo ucfirst(str_replace('_', ' ', $key))?>                        
+                    </th>
+                <?php } ?>
             </thead>
+            <tbody>
+                <?php foreach( $hotels as $hotel) {?>
+                    <tr>
+                        <td class="text-center"><?php echo$hotel['name']?></td>
+                        <td class="text-center"><?php echo$hotel['description']?></td>
+                        <td class="text-center"><?php echo$hotel['parking'] ? 'yes' : 'no' ?></td>
+                        <td class="text-center"><?php echo$hotel['vote']?></td>
+                        <td class="text-center"><?php echo$hotel['distance_to_center']?></td>
+                    </tr>
+                <?php }?>
+            </tbody>
         </table>
     </div>
  </div>   
