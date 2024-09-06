@@ -54,6 +54,16 @@ if (isset($_GET['parking'])) {
         }
     }
 }
+if (isset($_GET['vote']) && $_GET['vote'] != '0' ) {
+    $tempHotels = [];
+
+    foreach($filteredHotels as $hotel){
+        if($hotel['vote'] == $_GET['vote']){
+            $tempHotels [] = $hotel;
+        } 
+    }
+    $filteredHotels = $tempHotels;
+}
 ?>
 <!-- HTML -->
  <!DOCTYPE html>
@@ -78,7 +88,16 @@ if (isset($_GET['parking'])) {
                     value="on"
                     <?php if (isset($_GET['parking'])) echo 'checked'; ?>
                 >
-
+                <label class="form-check-label" for="parking">Mostra solo hotel con parcheggio</label>
+                <!-- FILTRO VOTO -->
+                <select name="vote" id="vote" class="ms-3 custom-select">
+                    <option value="0" selected >how many stars</option>
+                    <option value="1" <?php echo (isset($_GET['vote']) && $_GET['vote'] == 1) ? 'selected' : ''; ?>>1</option>
+                    <option value="2" <?php echo (isset($_GET['vote']) && $_GET['vote'] == 2) ? 'selected' : ''; ?>>2</option>
+                    <option value="3" <?php echo (isset($_GET['vote']) && $_GET['vote'] == 3) ? 'selected' : ''; ?>>3</option>
+                    <option value="4" <?php echo (isset($_GET['vote']) && $_GET['vote'] == 4) ? 'selected' : ''; ?>>4</option>
+                    <option value="5" <?php echo (isset($_GET['vote']) && $_GET['vote'] == 5) ? 'selected' : ''; ?>>5</option>
+                </select>
             </div>
 
 

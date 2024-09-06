@@ -53,6 +53,7 @@ $hotels = [
  </head>
  <body>  
      <div class="container">
+        <a href="./bonus/index.php"><button class="btn btn-primary"><i class="fas fa-folder"></i></button></a>
         <h2 class="my-4 text-center">Lista degli Hotel</h2>
         <table class="table table-striped table-dark">
             <thead>
